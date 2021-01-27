@@ -12,5 +12,6 @@ class CanvasActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mViewBinding = ActivityCanvasBinding.inflate(layoutInflater)
         setContentView(mViewBinding.root)
+        lifecycle.addObserver(mViewBinding.axisView)
     }
 }
