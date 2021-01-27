@@ -4,13 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".ui.CanvasActivity">
 
-    <com.cyd.learnandroid.view.AxisView
-        android:id="@+id/axisView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/eulerView"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="欧拉图"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/maskView"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="遮罩"
+                    android:textSize="20sp" />
+
+<!--                <Button-->
+<!--                    android:id="@+id/webIntent"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Web"-->
+<!--                    android:textSize="20sp" />-->
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:weightSum="3">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/emailIntent"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="email"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/calendarIntent"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="日历"-->
+<!--                    android:textSize="20sp" />-->
+
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </RelativeLayout>

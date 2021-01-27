@@ -171,7 +171,7 @@ class AxisView @JvmOverloads constructor(
         super.onSizeChanged(w, h, oldw, oldh)
         mHeight = h.toFloat()
         mWidth = w.toFloat()
-        mRadius = if (mHeight > mWidth / 2) mWidth / 2 else mHeight / 4
+        mRadius = mHeight / 4
         mRadius -= 20f
     }
 
