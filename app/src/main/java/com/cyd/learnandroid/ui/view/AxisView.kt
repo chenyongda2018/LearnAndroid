@@ -1,4 +1,4 @@
-package com.cyd.learnandroid.view
+package com.cyd.learnandroid.ui.view
 
 import android.content.Context
 import android.graphics.*
@@ -11,7 +11,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.cyd.learnandroid.R
-import com.cyd.learnandroid.util.UI
 import kotlinx.coroutines.*
 import kotlin.math.PI
 import kotlin.math.cos

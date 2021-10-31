@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.EulerActivity">
+    tools:context=".customview.EulerActivity">
 
-    <com.cyd.learnandroid.view.AxisView
+    <com.cyd.learnandroid.ui.view.AxisView
         android:id="@+id/axisView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

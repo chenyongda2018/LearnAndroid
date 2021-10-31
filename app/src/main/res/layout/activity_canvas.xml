@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CanvasActivity">
+    tools:context=".customview.CanvasActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,30 +38,30 @@
                     android:text="遮罩"
                     android:textSize="20sp" />
 
-<!--                <Button-->
-<!--                    android:id="@+id/webIntent"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="8dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="Web"-->
-<!--                    android:textSize="20sp" />-->
+                <Button
+                    android:id="@+id/morph"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="变形"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:weightSum="3">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
 
-<!--                <Button-->
-<!--                    android:id="@+id/emailIntent"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="8dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="email"-->
-<!--                    android:textSize="20sp" />-->
+                <Button
+                    android:id="@+id/surfaceView"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="SurfaceView"
+                    android:textSize="20sp" />
 
 <!--                <Button-->
 <!--                    android:id="@+id/calendarIntent"-->
@@ -73,7 +73,7 @@
 <!--                    android:textSize="20sp" />-->
 
 
-<!--            </LinearLayout>-->
+            </LinearLayout>
 
         </LinearLayout>
 

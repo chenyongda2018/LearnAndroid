@@ -9,13 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroid">
+        <activity android:name=".customview.SurfaceViewActivity"></activity>
+        <activity android:name=".ui.TestLeakActivity" />
+        <activity android:name=".customview.PostFabActivity" />
         <activity
-            android:name=".ui.MaskActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <activity
-            android:name=".ui.EulerActivity"
+            android:name=".customview.MaskActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ui.CanvasActivity" />
+        <activity
+            android:name=".customview.EulerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".customview.CanvasActivity" />
         <activity android:name=".ui.FragmentActivity" />
         <activity android:name=".ui.IntentActivity">
             <intent-filter>

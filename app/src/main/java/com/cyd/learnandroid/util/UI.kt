@@ -7,11 +7,11 @@ import android.content.res.Resources
  */
 object UI {
 
-    public fun getScreenWidth() : Int {
+    fun getScreenWidth() : Int {
         return Resources.getSystem().displayMetrics.widthPixels
     }
 
-    public fun getScreenHeight() : Int {
+    fun getScreenHeight() : Int {
         return Resources.getSystem().displayMetrics.heightPixels
     }
 

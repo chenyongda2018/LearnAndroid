@@ -1,4 +1,4 @@
-package com.cyd.learnandroid.ui
+package com.cyd.learnandroid.customview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

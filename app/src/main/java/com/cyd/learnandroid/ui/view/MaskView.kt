@@ -1,4 +1,4 @@
-package com.cyd.learnandroid.view
+package com.cyd.learnandroid.ui.view
 
 import android.content.Context
 import android.graphics.Canvas
@@ -69,7 +69,6 @@ class MaskView @JvmOverloads constructor(
     private fun randomRenderFace() {
         mFaceX = Random.nextInt(width - 300).toFloat()
         mFaceY = Random.nextInt(height - 300).toFloat()
-
     }
 
 }

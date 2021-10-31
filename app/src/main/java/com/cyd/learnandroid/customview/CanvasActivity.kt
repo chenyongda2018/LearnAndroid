@@ -1,4 +1,4 @@
-package com.cyd.learnandroid.ui
+package com.cyd.learnandroid.customview
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,8 @@ import com.cyd.learnandroid.databinding.ActivityCanvasBinding
 class CanvasActivity : AppCompatActivity() {
 
     private lateinit var mViewBinding: ActivityCanvasBinding
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +21,15 @@ class CanvasActivity : AppCompatActivity() {
         }
 
         mViewBinding.maskView.setOnClickListener {
-            startActivity(Intent(this,MaskActivity::class.java))
+            startActivity(Intent(this, MaskActivity::class.java))
+        }
+
+        mViewBinding.morph.setOnClickListener {
+            startActivity(Intent(this, PostFabActivity::class.java))
+        }
+
+        mViewBinding.surfaceView.setOnClickListener {
+            startActivity(Intent(this,SurfaceViewActivity::class.java))
         }
     }
 }
