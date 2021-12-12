@@ -8,6 +8,7 @@ import com.cyd.learnandroid.databinding.ActivityMainBinding
 import com.cyd.learnandroid.customview.CanvasActivity
 import com.cyd.learnandroid.ui.FragmentActivity
 import com.cyd.learnandroid.ui.IntentActivity
+import com.cyd.learnandroid.ui.wxartical.WxPublicMediaListActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,8 +32,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CanvasActivity::class.java))
         }
 
+        mViewBinding.wanAndBtn.setOnClickListener {
+            startActivity(Intent(this,WxPublicMediaListActivity::class.java))
+        }
+
         //设置沉浸式虚拟键，在MIUI系统中，虚拟键背景透明。原生系统中，虚拟键背景半透明。
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cyd.learnandroid">
+    package="com.cyd.learnandroid" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,19 +10,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LearnAndroid">
-        <activity android:name=".customview.MarqueeActivity"></activity>
-        <activity android:name=".customview.SurfaceViewActivity" />
-        <activity android:name=".customview.PostFabActivity" />
-        <activity
-            android:name=".customview.MaskActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".customview.EulerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".customview.CanvasActivity" />
-        <activity android:name=".ui.FragmentActivity" />
-        <activity android:name=".ui.IntentActivity">
+        android:theme="@style/Theme.LearnAndroid" >
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.IntentActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -32,13 +33,28 @@
                     android:scheme="example" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".customview.MarqueeActivity" />
+
+        <activity android:name=".customview.SurfaceViewActivity" />
+
+        <activity android:name=".customview.PostFabActivity" />
+
+        <activity
+            android:name=".customview.MaskActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name=".customview.EulerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity android:name=".customview.CanvasActivity" />
+
+        <activity android:name=".ui.FragmentActivity" />
+
+        <activity
+            android:name=".ui.wxartical.WxPublicMediaListActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

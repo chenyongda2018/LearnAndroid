@@ -14,38 +14,59 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="3">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
 
-            <Button
-                android:id="@+id/intentBtn"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:text="intent"
-                android:textSize="12sp" />
+                <Button
+                    android:id="@+id/intentBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="intent"
+                    android:textSize="12sp" />
 
-            <Button
-                android:id="@+id/fragmentBtn"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:text="fragment"
-                android:maxLines="1"
-                android:textSize="12sp" />
+                <Button
+                    android:id="@+id/fragmentBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="fragment"
+                    android:maxLines="1"
+                    android:textSize="12sp" />
 
-            <Button
-                android:id="@+id/canvasBtn"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:text="canvas"
-                android:maxLines="1"
-                android:textSize="12sp" />
+                <Button
+                    android:id="@+id/canvasBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="canvas"
+                    android:maxLines="1"
+                    android:textSize="12sp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/wanAndBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="Wan Android"
+                    android:maxLines="1"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
