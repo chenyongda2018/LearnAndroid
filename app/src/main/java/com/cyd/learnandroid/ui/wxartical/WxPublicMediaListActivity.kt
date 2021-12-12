@@ -21,8 +21,12 @@ class WxPublicMediaListActivity : AppCompatActivity() {
         mVb = ActivityWxPublicMediaListBinding.inflate(layoutInflater)
         setContentView(mVb.root)
 
-        mViewModel.wxPublicMedias.observe(this) { wxMedias ->
+        mViewModel.wxPublicMedias?.observe(this) { wxMedias ->
             mVb.resultTv.text = wxMedias.toString()
+        }
+
+        mVb.getWxPublicListBtn.setOnClickListener {
+            mViewModel.loadWxPublicMedias()
         }
 
 
