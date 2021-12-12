@@ -2,13 +2,10 @@ package com.cyd.learnandroid.ui.wxartical
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.cyd.learnandroid.api.WanAndroidApi
 import com.cyd.learnandroid.databinding.ActivityWxPublicMediaListBinding
-import com.cyd.learnandroid.ui.wxartical.model.bean.WxPublicResult
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.cyd.learnandroid.ui.wxartical.model.WxPublicRepository
+import com.cyd.learnandroid.ui.wxartical.viewmodel.WxPublicListViewModel
+import kotlinx.coroutines.Dispatchers
 
 class WxPublicMediaListActivity : AppCompatActivity() {
     
@@ -17,29 +14,17 @@ class WxPublicMediaListActivity : AppCompatActivity() {
     }
 
     private lateinit var mVb : ActivityWxPublicMediaListBinding
+    private var mViewModel =  WxPublicListViewModel(WxPublicRepository(Dispatchers.IO))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mVb = ActivityWxPublicMediaListBinding.inflate(layoutInflater)
         setContentView(mVb.root)
 
-        mVb.getWxPublicListBtn.setOnClickListener {
-            WanAndroidApi.getService()?.getWxPublicList()?.enqueue(object : Callback<WxPublicResult> {
-                override fun onResponse(
-                    call: Call<WxPublicResult>,
-                    response: Response<WxPublicResult>
-                ) {
-                    response.body()?.let {
-                        Log.d(TAG,it.toString())
-                        mVb.resultTv.text = it.toString()
-                    }
-                }
-
-                override fun onFailure(call: Call<WxPublicResult>, t: Throwable) {
-                    
-                }
-            })
+        mViewModel.wxPublicMedias.observe(this) { wxMedias ->
+            mVb.resultTv.text = wxMedias.toString()
         }
+
 
     }
 }

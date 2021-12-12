@@ -13,13 +13,14 @@ import java.util.concurrent.TimeUnit
 object WanAndroidApi {
     private const val BASE_URL = "https://www.wanandroid.com"
 
-    private var  retrofit: Retrofit? = null
+    var retrofit: Retrofit? = null
+
 
     init {
         val okHttpClient = OkHttpClient.Builder()
-            .connectTimeout(10_000,TimeUnit.MILLISECONDS)
-            .readTimeout(10_000,TimeUnit.MILLISECONDS)
-            .writeTimeout(10_000,TimeUnit.MILLISECONDS)
+            .connectTimeout(10_000, TimeUnit.MILLISECONDS)
+            .readTimeout(10_000, TimeUnit.MILLISECONDS)
+            .writeTimeout(10_000, TimeUnit.MILLISECONDS)
             .addInterceptor(HttpLoggingInterceptor())
             .build()
 
@@ -32,6 +33,6 @@ object WanAndroidApi {
     }
 
     fun getService(): IWanAndroidService? {
-        return WanAndroidApi.retrofit?.create(IWanAndroidService::class.java)
+        return retrofit?.create(IWanAndroidService::class.java)
     }
 }
