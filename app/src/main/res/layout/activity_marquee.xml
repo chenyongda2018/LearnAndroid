@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customview.MarqueeActivity">
+
+    <com.gongwen.marqueen.SimpleMarqueeView
+        android:id="@+id/marquee_view"
+        android:layout_width="wrap_content"
+        android:foregroundGravity="center_horizontal"
+        app:smvTextGravity="center_horizontal"
+        android:layout_height="40dp"
+        android:flipInterval="400"
+        android:inAnimation="@anim/in_right"
+        android:outAnimation="@anim/out_left"
+        android:layout_centerInParent="true"
+        android:autoStart="true"
+        android:animateFirstView="true"
+        app:smvTextSingleLine="true"
+        app:marqueeAnimDuration="2000"/>
+
+</RelativeLayout>

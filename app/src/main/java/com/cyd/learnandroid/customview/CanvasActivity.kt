@@ -31,5 +31,9 @@ class CanvasActivity : AppCompatActivity() {
         mViewBinding.surfaceView.setOnClickListener {
             startActivity(Intent(this,SurfaceViewActivity::class.java))
         }
+
+        mViewBinding.marqueeIntent.setOnClickListener {
+            startActivity(Intent(this,MarqueeActivity::class.java))
+        }
     }
 }

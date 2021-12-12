@@ -63,14 +63,14 @@
                     android:text="SurfaceView"
                     android:textSize="20sp" />
 
-<!--                <Button-->
-<!--                    android:id="@+id/calendarIntent"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="8dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="日历"-->
-<!--                    android:textSize="20sp" />-->
+                <Button
+                    android:id="@+id/marqueeIntent"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="跑马灯view"
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
