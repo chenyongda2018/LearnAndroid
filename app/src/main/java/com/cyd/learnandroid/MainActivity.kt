@@ -9,7 +9,6 @@ import com.cyd.learnandroid.customview.CanvasActivity
 import com.cyd.learnandroid.ui.FragmentActivity
 import com.cyd.learnandroid.ui.IntentActivity
 import com.cyd.learnandroid.ui.wanAnd.WanAndActivity
-import com.cyd.learnandroid.ui.wanAnd.wxartical.WxPublicMediaListActivity
 
 class MainActivity : AppCompatActivity() {
 

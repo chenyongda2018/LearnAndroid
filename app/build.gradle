@@ -78,6 +78,13 @@ dependencies {
     implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
 
+    //navigation
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
 
 }
 

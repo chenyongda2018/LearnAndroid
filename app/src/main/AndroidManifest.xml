@@ -46,10 +46,6 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".customview.CanvasActivity" />
         <activity android:name=".ui.FragmentActivity" />
-        <activity
-            android:name=".ui.wanAnd.wxartical.WxPublicMediaListActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <activity
             android:name=".ui.wanAnd.WanAndActivity"

@@ -11,14 +11,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cyd.learnandroid.databinding.ActivityIntentBinding
 import com.cyd.learnandroid.ui.base.BaseActivity
 
-class IntentActivity : BaseActivity() {
+class IntentActivity : BaseActivity<ActivityIntentBinding>() {
 
-    private lateinit var mViewBinding: ActivityIntentBinding
+    override fun getViewBing(): ActivityIntentBinding? = ActivityIntentBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mViewBinding = ActivityIntentBinding.inflate(layoutInflater);
-        setContentView(mViewBinding.root)
+
 
         bindCallIntent()
 
@@ -34,10 +33,10 @@ class IntentActivity : BaseActivity() {
     private fun bindCalendar() {
         val calendarIntent =
             Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI).apply {
-                var beginTime = Calendar.getInstance().apply {
+                val beginTime = Calendar.getInstance().apply {
                     set(2021, 1, 19, 22, 22)
                 }
-                var endTime = Calendar.getInstance().apply {
+                val endTime = Calendar.getInstance().apply {
                     set(2021, 1, 20, 22, 22)
                 }
                 putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.timeInMillis)
@@ -46,7 +45,7 @@ class IntentActivity : BaseActivity() {
                 putExtra(CalendarContract.Events.EVENT_LOCATION, "xiao mi")
             }
 
-        mViewBinding.calendarIntent.setOnClickListener {
+        mVb?.calendarIntent?.setOnClickListener {
             startActivity(calendarIntent)
         }
     }
@@ -59,7 +58,7 @@ class IntentActivity : BaseActivity() {
             putExtra(Intent.EXTRA_TEXT,"email test text")
             putExtra(Intent.EXTRA_STREAM,Uri.parse("content://path/to/email/attachment"))
         }
-        mViewBinding.emailIntent.setOnClickListener {
+        mVb?.emailIntent?.setOnClickListener {
             startActivity(emailIntent)
         }
     }
@@ -68,7 +67,7 @@ class IntentActivity : BaseActivity() {
         val intent = Uri.parse("http://www.android.com").let { url ->
             Intent(Intent.ACTION_VIEW, url)
         }
-        mViewBinding.webIntent.setOnClickListener {
+        mVb?.webIntent?.setOnClickListener {
             startActivity(intent)
         }
     }
@@ -84,7 +83,7 @@ class IntentActivity : BaseActivity() {
             PackageManager.MATCH_DEFAULT_ONLY)
 
 
-        mViewBinding.mapIntent.setOnClickListener {
+        mVb?.mapIntent?.setOnClickListener {
             if(activities.isNotEmpty()) {
                 startActivity(mapIntent)
             } else {
@@ -97,7 +96,7 @@ class IntentActivity : BaseActivity() {
         val callIntent = Uri.parse("tel:10086").let { number ->
             Intent(Intent.ACTION_DIAL, number)
         }
-        mViewBinding.callIntent.setOnClickListener {
+        mVb?.callIntent?.setOnClickListener {
             startActivity(callIntent)
         }
     }
