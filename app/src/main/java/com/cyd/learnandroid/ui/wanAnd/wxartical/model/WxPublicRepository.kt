@@ -1,8 +1,8 @@
-package com.cyd.learnandroid.ui.wxartical.model
+package com.cyd.learnandroid.ui.wanAnd.wxartical.model
 
 import com.cyd.learnandroid.api.IWanAndroidService
 import com.cyd.learnandroid.api.WanAndroidApi
-import com.cyd.learnandroid.ui.wxartical.model.bean.WxPublicResult
+import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxPublicResult
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

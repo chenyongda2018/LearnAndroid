@@ -1,8 +1,8 @@
-package com.cyd.learnandroid.ui.wxartical.viewmodel
+package com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel
 
 import androidx.lifecycle.*
-import com.cyd.learnandroid.ui.wxartical.model.WxPublicRepository
-import com.cyd.learnandroid.ui.wxartical.model.bean.WxPublicMedia
+import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxPublicRepository
+import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxPublicMedia
 import kotlinx.coroutines.launch
 
 /**
@@ -14,7 +14,9 @@ class WxPublicListViewModel(private val remoteRepo: WxPublicRepository) : ViewMo
 
     val wxPublicMedias : LiveData<List<WxPublicMedia>?> = _wxPublicMedias
 
-
+    /**
+     * 公众号列表
+     */
     fun loadWxPublicMedias() {
         viewModelScope.launch {
             _wxPublicMedias.value = remoteRepo.getWxPublicMedias()?.data

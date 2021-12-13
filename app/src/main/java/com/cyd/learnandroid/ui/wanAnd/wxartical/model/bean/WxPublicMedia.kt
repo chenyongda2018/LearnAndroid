@@ -1,4 +1,4 @@
-package com.cyd.learnandroid.ui.wxartical.model.bean
+package com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean
 
 /**
  * Created by cyd on 2021/12/12

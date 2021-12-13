@@ -1,7 +1,6 @@
 package com.cyd.learnandroid.api
 
-import com.cyd.learnandroid.ui.wxartical.model.bean.WxPublicMedia
-import com.cyd.learnandroid.ui.wxartical.model.bean.WxPublicResult
+import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxPublicResult
 import retrofit2.Call
 import retrofit2.http.GET
 

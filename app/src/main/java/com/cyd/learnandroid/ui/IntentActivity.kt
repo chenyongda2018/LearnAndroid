@@ -9,8 +9,9 @@ import android.provider.CalendarContract
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cyd.learnandroid.databinding.ActivityIntentBinding
+import com.cyd.learnandroid.ui.base.BaseActivity
 
-class IntentActivity : AppCompatActivity() {
+class IntentActivity : BaseActivity() {
 
     private lateinit var mViewBinding: ActivityIntentBinding
 

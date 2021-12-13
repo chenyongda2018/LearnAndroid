@@ -1,19 +1,20 @@
-package com.cyd.learnandroid.ui.wxartical
+package com.cyd.learnandroid.ui.wanAnd.wxartical
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cyd.learnandroid.databinding.ActivityWxPublicMediaListBinding
-import com.cyd.learnandroid.ui.wxartical.model.WxPublicRepository
-import com.cyd.learnandroid.ui.wxartical.viewmodel.WxPublicListViewModel
+import com.cyd.learnandroid.ui.base.BaseActivity
+import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxPublicRepository
+import com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel.WxPublicListViewModel
 import kotlinx.coroutines.Dispatchers
 
-class WxPublicMediaListActivity : AppCompatActivity() {
+class WxPublicMediaListActivity : BaseActivity() {
     
     companion object {
         val TAG: String = WxPublicMediaListActivity::class.java.simpleName
     }
 
     private lateinit var mVb : ActivityWxPublicMediaListBinding
+
     private var mViewModel =  WxPublicListViewModel(WxPublicRepository(Dispatchers.IO))
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +22,11 @@ class WxPublicMediaListActivity : AppCompatActivity() {
         mVb = ActivityWxPublicMediaListBinding.inflate(layoutInflater)
         setContentView(mVb.root)
 
-        mViewModel.wxPublicMedias?.observe(this) { wxMedias ->
-            mVb.resultTv.text = wxMedias.toString()
+        mViewModel.wxPublicMedias.observe(this) { wxMedias ->
+            wxMedias?.forEach {
+                mVb.tabLayout.addTab(mVb.tabLayout.newTab().setText(it.name))
+            }
         }
-
-        mVb.getWxPublicListBtn.setOnClickListener {
-            mViewModel.loadWxPublicMedias()
-        }
-
-
+        mViewModel.loadWxPublicMedias()
     }
 }

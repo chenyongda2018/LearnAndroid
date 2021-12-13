@@ -4,23 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.wxartical.WxPublicMediaListActivity">
-
-    <Button
-        android:id="@+id/getWxPublicListBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="REQUST"/>
+    tools:context=".ui.wanAnd.wxartical.WxPublicMediaListActivity">
 
 
-    <TextView
-        android:id="@+id/resultTv"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/getWxPublicListBtn"
-        android:layout_marginTop="20dp"
-        android:hint="Waiting result..."/>
+        app:tabBackground="@color/purple_500"
+        app:tabMode="scrollable">
+
+
+    </com.google.android.material.tabs.TabLayout>
 
 </RelativeLayout>
