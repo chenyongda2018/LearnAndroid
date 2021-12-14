@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.cyd.learnandroid.databinding.FragWxMediaTabLayoutBinding
 import com.cyd.learnandroid.ui.base.BaseFragment
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxPublicRepository
@@ -24,7 +26,6 @@ class WxMediaFragment : BaseFragment<FragWxMediaTabLayoutBinding>() {
     ): FragWxMediaTabLayoutBinding? =
         FragWxMediaTabLayoutBinding.inflate(inflater, container, false)
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -34,14 +35,26 @@ class WxMediaFragment : BaseFragment<FragWxMediaTabLayoutBinding>() {
                     it.addTab(it.newTab().setText(media.name))
                 }
             }
+
+            mViewBinding?.viewPager?.adapter = ArticleListAdapter(this, wxMedias?.size ?: 0)
+
         }
         mViewModel.loadWxPublicMedias()
+
+
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        mViewBinding = null
+
+}
+
+class ArticleListAdapter(frag: Fragment, val size: Int) : FragmentStateAdapter(frag) {
+
+    override fun getItemCount(): Int = size
+
+    override fun createFragment(position: Int): Fragment {
+        return ArticleListFragment()
     }
+
 }
 
 

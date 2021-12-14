@@ -13,12 +13,17 @@ abstract class BaseActivity<VB : ViewBinding>: AppCompatActivity() {
 
     protected var  mVb : VB? = null
 
-    abstract fun getViewBing(): VB?
+    abstract fun getViewBing(): VB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mVb = getViewBing()
         setContentView(mVb?.root)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mVb = null
     }
 
 }
