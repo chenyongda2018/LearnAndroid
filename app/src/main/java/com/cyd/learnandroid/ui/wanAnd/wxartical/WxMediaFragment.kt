@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.cyd.learnandroid.databinding.FragWxMediaTabLayoutBinding
 import com.cyd.learnandroid.ui.base.BaseFragment
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxPublicRepository
+import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxPublicMedia
 import com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel.WxPublicListViewModel
+import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.Dispatchers
 
 /**
@@ -29,28 +32,54 @@ class WxMediaFragment : BaseFragment<FragWxMediaTabLayoutBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         mViewModel.wxPublicMedias.observe(viewLifecycleOwner) { wxMedias ->
-            wxMedias?.forEach { media ->
+            //添加tabLayout
+            wxMedias?.forEachIndexed { idx, media ->
                 mViewBinding?.tabLayout?.let {
-                    it.addTab(it.newTab().setText(media.name))
+                    it.addTab(it.newTab().setText(media.name).setId(idx))
                 }
             }
 
-            mViewBinding?.viewPager?.adapter = ArticleListAdapter(this, wxMedias?.size ?: 0)
-
+            mViewBinding?.viewPager?.adapter = WxArticlePageAdapter(this, wxMedias)
         }
+        bindVp2Tab()
         mViewModel.loadWxPublicMedias()
+    }
 
+    private fun bindVp2Tab() {
+        mViewBinding?.tabLayout?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                mViewBinding?.viewPager?.currentItem = tab?.id ?: 0
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+        })
+
+        mViewBinding?.viewPager?.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                mViewBinding?.tabLayout?.let {
+                    it.selectTab(it.getTabAt(position))
+                }
+            }
+        })
     }
 
 }
 
-class ArticleListAdapter(frag: Fragment, val size: Int) : FragmentStateAdapter(frag) {
+class WxArticlePageAdapter(frag: Fragment, private val wxMediaList: List<WxPublicMedia>?) :
+    FragmentStateAdapter(frag) {
 
-    override fun getItemCount(): Int = size
+    override fun getItemCount(): Int = wxMediaList?.size ?: 0
 
     override fun createFragment(position: Int): Fragment {
-        return ArticleListFragment()
+        return ArticleListFragment.newInstance(wxMediaList?.get(position)?.id ?: 400)
     }
 
 }

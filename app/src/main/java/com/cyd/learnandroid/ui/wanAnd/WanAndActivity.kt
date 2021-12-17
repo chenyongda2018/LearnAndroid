@@ -6,6 +6,7 @@ import android.view.View
 import androidx.core.view.forEachIndexed
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cyd.learnandroid.R
@@ -25,11 +26,11 @@ class WanAndActivity : BaseActivity<ActivityWanAndBinding>() {
     }
 
     private val fragments = mapOf<Int, Fragment>(
-        INDEX_HOME to ArticleListFragment(),
-        INDEX_SQUARE to ArticleListFragment(),
+        INDEX_HOME to NavHostFragment(),
+        INDEX_SQUARE to NavHostFragment(),
         INDEX_WX_PUBLIC to WxMediaFragment(),
-        INDEX_SYSTEM to ArticleListFragment(),
-        INDEX_PROGRAM to ArticleListFragment(),
+        INDEX_SYSTEM to NavHostFragment(),
+        INDEX_PROGRAM to NavHostFragment(),
     )
 
 
@@ -53,7 +54,7 @@ class MainFragAdapter(activity: FragmentActivity, private val fragments: Map<Int
     override fun getItemCount(): Int = fragments.size
 
     override fun createFragment(position: Int): Fragment {
-        return fragments.get(position) ?: error("can't find fragment")
+        return fragments[position] ?: error("can't find fragment")
     }
 }
 

@@ -40,7 +40,7 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 
     //ktx
     implementation 'androidx.core:core-ktx:1.7.0'

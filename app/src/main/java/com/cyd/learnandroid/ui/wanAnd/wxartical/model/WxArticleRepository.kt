@@ -1,6 +1,5 @@
 package com.cyd.learnandroid.ui.wanAnd.wxartical.model
 
-import com.cyd.learnandroid.api.IWanAndroidService
 import com.cyd.learnandroid.api.WanAndroidApi
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxArticleListResult
 import kotlinx.coroutines.CoroutineDispatcher
@@ -16,7 +15,7 @@ class WxArticleRepository(
     private val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default
 ) {
 
-    suspend fun getArticleList(chapterId: Int, page: Int): WxArticleListResult? =
+    suspend fun getArticleList(chapterId: Int, page: Int = 1): WxArticleListResult? =
         withContext(defaultDispatcher) {
             WanAndroidApi.getService()
                 ?.getWxArticleList(chapterId, page)?.execute()?.body()
