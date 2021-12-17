@@ -9,13 +9,16 @@ data class WxPublicResult(
     val data: List<WxPublicMedia>,
     val errorCode: Int,
     val errorMsg: String
-)
+) {
+    data class WxPublicMedia(
+        val courseId: Int,
+        val id: Int,
+        val name: String,
+        val order: Long,
+        val parentChapterId: Int,
+        val userControlSetTop: Boolean
+    )
+}
 
-data class WxPublicMedia(
-    val courseId: Int,
-    val id: Int,
-    val name: String,
-    val order: Long,
-    val parentChapterId: Int,
-    val userControlSetTop: Boolean
-)
+
+

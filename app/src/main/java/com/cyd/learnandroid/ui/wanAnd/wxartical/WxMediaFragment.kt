@@ -41,9 +41,7 @@ class WxMediaFragment : BaseFragment<FragWxMediaTabLayoutBinding>() {
         }
         mViewModel.loadWxPublicMedias()
 
-
     }
-
 
 }
 

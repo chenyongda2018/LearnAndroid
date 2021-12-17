@@ -9,14 +9,15 @@ import kotlinx.coroutines.withContext
 
 /**
  * Created by cyd on 2021/12/12
+ * 公众号列表
  **/
 class WxPublicRepository(
     private val defaultDispatcher: CoroutineDispatcher = Dispatchers.Default
 ) {
 
     suspend fun getWxPublicMedias(): WxPublicResult? = withContext(defaultDispatcher) {
-        WanAndroidApi.retrofit
-            ?.create(IWanAndroidService::class.java)
+        WanAndroidApi
+            .getService()
             ?.getWxPublicList()?.execute()?.body()
     }
 
