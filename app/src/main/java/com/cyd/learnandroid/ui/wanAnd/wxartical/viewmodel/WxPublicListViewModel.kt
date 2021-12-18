@@ -3,7 +3,9 @@ package com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel
 import androidx.lifecycle.*
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxPublicRepository
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxPublicMedia
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.lang.IllegalArgumentException
 
 /**
  * Created by cyd on 2021/12/12
@@ -12,7 +14,7 @@ class WxPublicListViewModel(private val remoteRepo: WxPublicRepository) : ViewMo
 
     private var _wxPublicMedias: MutableLiveData<List<WxPublicMedia>?> = MutableLiveData()
 
-    val wxPublicMedias : LiveData<List<WxPublicMedia>?> = _wxPublicMedias
+    val wxPublicMedias: LiveData<List<WxPublicMedia>?> = _wxPublicMedias
 
     /**
      * 公众号列表
@@ -22,5 +24,18 @@ class WxPublicListViewModel(private val remoteRepo: WxPublicRepository) : ViewMo
             _wxPublicMedias.value = remoteRepo.getWxPublicMedias()?.data
         }
     }
+
+}
+
+class WxPublicListViewModelFactory(private val remoteRepo: WxPublicRepository) :
+    ViewModelProvider.Factory {
+
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(WxPublicListViewModel::class.java)) {
+            return WxPublicListViewModel(remoteRepo) as T
+        }
+        throw IllegalArgumentException("Can't find the viewModel")
+    }
+
 
 }

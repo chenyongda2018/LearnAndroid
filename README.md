@@ -4,8 +4,9 @@
 - [x] Coroutine  
 - [x] ViewPager2  
 - [x] LiveData  
+- [x] Flow
 - [ ] DataBinding  
 - [x] ViewBinding  
-- [ ] Paging3  
+- [x] Paging3  
 - [ ] Navigation  
 - [ ] Room  

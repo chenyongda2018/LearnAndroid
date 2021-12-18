@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cyd.learnandroid.databinding.FragWxMediaTabLayoutBinding
@@ -12,6 +14,7 @@ import com.cyd.learnandroid.ui.base.BaseFragment
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxPublicRepository
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.bean.WxPublicMedia
 import com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel.WxPublicListViewModel
+import com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel.WxPublicListViewModelFactory
 import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.Dispatchers
 
@@ -20,7 +23,7 @@ import kotlinx.coroutines.Dispatchers
  **/
 class WxMediaFragment : BaseFragment<FragWxMediaTabLayoutBinding>() {
 
-    private var mViewModel = WxPublicListViewModel(WxPublicRepository(Dispatchers.IO))
+    private lateinit var mViewModel: WxPublicListViewModel
 
     override fun getViewBinding(
         inflater: LayoutInflater,
@@ -28,6 +31,14 @@ class WxMediaFragment : BaseFragment<FragWxMediaTabLayoutBinding>() {
         savedInstanceState: Bundle?
     ): FragWxMediaTabLayoutBinding? =
         FragWxMediaTabLayoutBinding.inflate(inflater, container, false)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mViewModel = ViewModelProvider(
+            this,
+            WxPublicListViewModelFactory(WxPublicRepository(Dispatchers.IO))
+        )[WxPublicListViewModel::class.java]
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

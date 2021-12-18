@@ -6,13 +6,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cyd.learnandroid.databinding.FragArticleListLayoutBinding
 import com.cyd.learnandroid.ui.base.BaseFragment
 import com.cyd.learnandroid.ui.wanAnd.wxartical.model.WxArticleRepository
 import com.cyd.learnandroid.ui.wanAnd.wxartical.ui.ArticleListAdapter
 import com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel.WxArticleListViewModel
+import com.cyd.learnandroid.ui.wanAnd.wxartical.viewmodel.WxArticleListViewModelFactory
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 /**
  * @date: 2021/12/14
@@ -21,8 +26,7 @@ import kotlinx.coroutines.Dispatchers
  */
 class ArticleListFragment private constructor() : BaseFragment<FragArticleListLayoutBinding>() {
 
-    private val mViewModel: WxArticleListViewModel =
-        WxArticleListViewModel(WxArticleRepository(Dispatchers.IO))
+    private lateinit var mViewModel: WxArticleListViewModel
 
     override fun getViewBinding(
         inflater: LayoutInflater,
@@ -32,10 +36,6 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
         return FragArticleListLayoutBinding.inflate(inflater, container, false)
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.d(TAG, "onAttach")
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,22 +43,26 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
 
         val chapterId = arguments?.get(EXTRA_CHAPTER_ID) as Int
         Log.d(TAG, "chapterId: $chapterId")
+        mViewModel = ViewModelProvider(
+            this,
+            WxArticleListViewModelFactory(WxArticleRepository(Dispatchers.IO), chapterId)
+        )[WxArticleListViewModel::class.java]
 
-
-        val adapter = ArticleListAdapter(null)
+        val pagingAdapter = ArticleListAdapter()
 
         mViewBinding?.recyclerView?.apply {
             this.layoutManager = LinearLayoutManager(context)
-            this.adapter = adapter
+            this.adapter = pagingAdapter
         }
 
-        mViewModel.articleList.observe(this) { articles ->
-            Log.d(TAG, articles?.toString() + "")
-            adapter.updateData(articles)
+        lifecycleScope.launch {
+            mViewModel.articleFlow.collectLatest { pagingData ->
+                pagingAdapter.submitData(pagingData)
+            }
+//            mViewModel.articleFlow.observe(viewLifecycleOwner) {pagingData ->
+//                pagingAdapter.submitData(lifecycle,pagingData)
+//            }
         }
-
-        mViewModel.getArticleList(chapterId, 1)
-
     }
 
 
