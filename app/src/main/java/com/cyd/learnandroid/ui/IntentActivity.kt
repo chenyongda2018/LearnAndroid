@@ -7,9 +7,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.CalendarContract
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.cyd.learnandroid.databinding.ActivityIntentBinding
-import com.cyd.learnandroid.ui.base.BaseActivity
+import com.example.wanandroid.base.BaseActivity
 
 class IntentActivity : BaseActivity<ActivityIntentBinding>() {
 

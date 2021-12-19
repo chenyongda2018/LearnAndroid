@@ -40,17 +40,22 @@
         <activity android:name=".customview.PostFabActivity" />
         <activity
             android:name=".customview.MaskActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.LearnAndroid" />
         <activity
             android:name=".customview.EulerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".customview.CanvasActivity" />
         <activity android:name=".ui.FragmentActivity" />
-
         <activity
             android:name=".ui.wanAnd.WanAndActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.NoActionBar" />
+
+        <activity
+            android:name="com.example.wanandroid.wxartical.ui.WxArticleActivity"
+            android:exported="false"
+
+            android:theme="@style/Theme.NoActionBar"/>
     </application>
 
 </manifest>
