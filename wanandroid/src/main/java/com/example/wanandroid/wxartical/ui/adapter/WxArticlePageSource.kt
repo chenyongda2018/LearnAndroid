@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.wanandroid.wxartical.model.WxArticleRepository
-import com.example.wanandroid.wxartical.model.bean.WxArticleBean
+import com.example.wanandroid.wxartical.model.bean.ArticleBean
 import java.lang.Exception
 
 /**
@@ -14,13 +14,13 @@ import java.lang.Exception
 class WxArticlePageSource(
     private val remoteRepo: WxArticleRepository,
     private val chapterId: Int
-) : PagingSource<Int, WxArticleBean>() {
+) : PagingSource<Int, ArticleBean>() {
 
     companion object {
         const val TAG = "WxArticlePageSource"
     }
 
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, WxArticleBean> {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ArticleBean> {
         try {
             val nextPageNumber = params.key ?: 1
             Log.d(TAG, "load(), nextPage: $nextPageNumber")
@@ -42,7 +42,7 @@ class WxArticlePageSource(
         }
     }
 
-    override fun getRefreshKey(state: PagingState<Int, WxArticleBean>): Int? {
+    override fun getRefreshKey(state: PagingState<Int, ArticleBean>): Int? {
         return state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)
             anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)

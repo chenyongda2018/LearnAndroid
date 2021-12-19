@@ -6,16 +6,16 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wanandroid.databinding.ArticleListItemLayoutBinding
-import com.example.wanandroid.wxartical.model.bean.WxArticleBean
+import com.example.wanandroid.wxartical.model.bean.ArticleBean
 
 /**
  * Created by cyd on 2021/12/17
  * 微信文章列表适配器
  **/
 class ArticleListAdapter(
-    diffCallback: DiffUtil.ItemCallback<WxArticleBean> = WxArticleComparator,
+    diffCallback: DiffUtil.ItemCallback<ArticleBean> = WxArticleComparator,
     onItemAction: ((url: String?) -> Unit)?
-) : PagingDataAdapter<WxArticleBean, ArticleListAdapter.ArticleItemVH>(diffCallback) {
+) : PagingDataAdapter<ArticleBean, ArticleListAdapter.ArticleItemVH>(diffCallback) {
 
     private var onItemClickAction: ((url: String?) -> Unit)? = onItemAction
 
@@ -35,7 +35,7 @@ class ArticleListAdapter(
     ) :
         RecyclerView.ViewHolder(itemBinding.root) {
 
-        fun bindData(article: WxArticleBean?) {
+        fun bindData(article: ArticleBean?) {
             with(itemBinding) {
                 title.text = article?.title
                 authorTv.text = article?.author
@@ -51,12 +51,12 @@ class ArticleListAdapter(
     }
 }
 
-object WxArticleComparator : DiffUtil.ItemCallback<WxArticleBean>() {
-    override fun areItemsTheSame(oldItem: WxArticleBean, newItem: WxArticleBean): Boolean {
+object WxArticleComparator : DiffUtil.ItemCallback<ArticleBean>() {
+    override fun areItemsTheSame(oldItem: ArticleBean, newItem: ArticleBean): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: WxArticleBean, newItem: WxArticleBean): Boolean {
+    override fun areContentsTheSame(oldItem: ArticleBean, newItem: ArticleBean): Boolean {
         return oldItem.id == newItem.id
     }
 

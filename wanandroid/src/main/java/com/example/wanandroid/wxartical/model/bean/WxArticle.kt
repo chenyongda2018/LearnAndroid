@@ -13,7 +13,7 @@ data class WxArticleListResult(
 
 data class Data(
     val curPage: Int,
-    val datas: List<WxArticleBean>,
+    val datas: List<ArticleBean>,
     val offset: Int,
     val over: Boolean,
     val pageCount: Int,
@@ -22,7 +22,7 @@ data class Data(
 )
 
 
-data class WxArticleBean(
+data class ArticleBean(
     val author: String,
     val chapterId: Int,
     val chapterName: String,

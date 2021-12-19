@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wanandroid.base.BaseFragment
 import com.example.wanandroid.databinding.FragArticleListLayoutBinding
@@ -16,6 +17,7 @@ import com.example.wanandroid.wxartical.ui.WxArticleActivity
 import com.example.wanandroid.wxartical.viewmodel.WxArticleListViewModel
 import com.example.wanandroid.wxartical.viewmodel.WxArticleListViewModelFactory
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -27,6 +29,8 @@ import kotlinx.coroutines.launch
 class ArticleListFragment private constructor() : BaseFragment<FragArticleListLayoutBinding>() {
 
     private lateinit var mViewModel: WxArticleListViewModel
+
+    private lateinit var pagingAdapter: ArticleListAdapter
 
     override fun getViewBinding(
         inflater: LayoutInflater,
@@ -47,13 +51,21 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
             WxArticleListViewModelFactory(WxArticleRepository(Dispatchers.IO), chapterId)
         )[WxArticleListViewModel::class.java]
 
-        val pagingAdapter = ArticleListAdapter() { url ->
-            WxArticleActivity.start(context,url)
+        pagingAdapter = ArticleListAdapter { url ->
+            WxArticleActivity.start(context, url)
+        }.apply {
+            addLoadStateListener {
+                mViewBinding?.refreshLayout?.isRefreshing = it.refresh == LoadState.Loading
+            }
         }
 
         mViewBinding?.recyclerView?.apply {
             this.layoutManager = LinearLayoutManager(context)
             this.adapter = pagingAdapter
+        }
+
+        mViewBinding?.refreshLayout?.setOnRefreshListener {
+            refresh()
         }
 
         lifecycleScope.launch {
@@ -64,9 +76,7 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
     }
 
     private fun refresh() {
-//        lifecycleScope.launch {
-//            mViewModel.articleFlow.
-//        }
+        pagingAdapter.refresh()
     }
 
     companion object {
