@@ -14,7 +14,7 @@ import java.lang.Exception
 class WxArticlePageSource(
     private val remoteRepo: WxArticleRepository,
     private val chapterId: Int
-): PagingSource<Int,WxArticleBean>() {
+) : PagingSource<Int, WxArticleBean>() {
 
     companion object {
         const val TAG = "WxArticlePageSource"
@@ -23,16 +23,18 @@ class WxArticlePageSource(
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, WxArticleBean> {
         try {
             val nextPageNumber = params.key ?: 1
-            Log.d(TAG,"load(), nextPage: $nextPageNumber")
-            val response = remoteRepo.getArticleList(chapterId,nextPageNumber)?.data
+            Log.d(TAG, "load(), nextPage: $nextPageNumber")
+            val response = remoteRepo.getArticleList(chapterId, nextPageNumber)?.data
 
             val data = response?.datas ?: emptyList()
-            Log.d(TAG,"load(), data: ${data.toString()}")
+            Log.d(TAG, "load(), data: ${data.toString()}")
 
             return LoadResult.Page(
                 data = data,
                 prevKey = null,
-                nextKey = nextPageNumber.plus(1)
+                nextKey = if (nextPageNumber >= response?.pageCount ?: 1) null else nextPageNumber.plus(
+                    1
+                )
             )
         } catch (e: Exception) {
             e.printStackTrace()

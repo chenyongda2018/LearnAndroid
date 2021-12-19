@@ -19,7 +19,7 @@ class WxArticleListViewModel(
     private val chapterId: Int
 ) : ViewModel() {
 
-    val articleFlow = Pager<Int, WxArticleBean>(
+    val articleFlow = Pager(
         PagingConfig(pageSize = 20)
     ) {
         WxArticlePageSource(remoteRepo, chapterId)

@@ -31,7 +31,7 @@ data class WxArticleBean(
     val fresh: Boolean,
     val id: Int,
     val link: String,
-    val niceDate: String,
+    val niceShareDate: String,
     val publishTime: Long,
     val realSuperChapterId: Int,
     val superChapterId: Int,

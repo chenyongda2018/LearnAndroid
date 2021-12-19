@@ -36,7 +36,6 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
         return FragArticleListLayoutBinding.inflate(inflater, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d(TAG, "onViewCreated")
@@ -59,12 +58,14 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
             mViewModel.articleFlow.collectLatest { pagingData ->
                 pagingAdapter.submitData(pagingData)
             }
-//            mViewModel.articleFlow.observe(viewLifecycleOwner) {pagingData ->
-//                pagingAdapter.submitData(lifecycle,pagingData)
-//            }
         }
     }
 
+    private fun refresh() {
+//        lifecycleScope.launch {
+//            mViewModel.articleFlow.
+//        }
+    }
 
     companion object {
         const val TAG = "ArticleListFragment"

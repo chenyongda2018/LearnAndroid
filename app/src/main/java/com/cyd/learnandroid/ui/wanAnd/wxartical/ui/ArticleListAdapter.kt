@@ -26,45 +26,28 @@ class ArticleListAdapter(
     override fun onBindViewHolder(holder: ArticleItemVH, position: Int) {
         holder.bindData(getItem(position))
     }
-//
-//    override fun getItemCount(): Int = data?.size ?: 0
-//
-//
-//    fun updateData(data: List<WxArticleBean>?) {
-//        if (this.data == null || this.data!!.isEmpty()) {
-//            this.data = data
-//            notifyDataSetChanged()
-//            return
-//        }
-//
-//        this.data?.let {
-//            val lastIndex = it.size
-//            val newData = arrayListOf<WxArticleBean>()
-//            newData.addAll(it)
-//            if (data != null) {
-//                newData.addAll(data)
-//            }
-//            val newIndex = newData.size
-//            if (lastIndex < newIndex) {
-//                notifyItemRangeInserted(lastIndex, newIndex - 1)
-//            }
-//        }
-//    }
-//
 
     class ArticleItemVH(private val itemBinding: ArticleListItemLayoutBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bindData(article: WxArticleBean?) {
-            itemBinding.title.text = article?.title
-            itemBinding.cardView.setOnClickListener {
-                Toast.makeText(itemBinding.root.context, article?.link, Toast.LENGTH_SHORT).show()
+            with(itemBinding) {
+                title.text = article?.title
+                authorTv.text = article?.author
+                publishTime.text = article?.niceShareDate
+
+                cardView.setOnClickListener {
+                    Toast.makeText(itemBinding.root.context, article?.link, Toast.LENGTH_SHORT)
+                        .show()
+                }
             }
+
         }
+
     }
 }
 
-object WxArticleComparator: DiffUtil.ItemCallback<WxArticleBean>() {
+object WxArticleComparator : DiffUtil.ItemCallback<WxArticleBean>() {
     override fun areItemsTheSame(oldItem: WxArticleBean, newItem: WxArticleBean): Boolean {
         return oldItem.id == newItem.id
     }
