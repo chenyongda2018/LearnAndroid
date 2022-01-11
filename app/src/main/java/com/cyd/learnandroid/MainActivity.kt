@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.WindowManager
 import com.cyd.learnandroid.databinding.ActivityMainBinding
 import com.cyd.learnandroid.customview.CanvasActivity
+import com.cyd.learnandroid.customview.TestDpActivity
 import com.cyd.learnandroid.ui.FragmentActivity
 import com.cyd.learnandroid.ui.IntentActivity
-import com.cyd.learnandroid.ui.wanAnd.WanAndActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,9 +32,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CanvasActivity::class.java))
         }
 
-        mViewBinding.wanAndBtn.setOnClickListener {
-            startActivity(Intent(this, WanAndActivity::class.java))
+        mViewBinding.dpBtn.setOnClickListener {
+            startActivity(Intent(this,TestDpActivity::class.java))
         }
+
 
         //设置沉浸式虚拟键，在MIUI系统中，虚拟键背景透明。原生系统中，虚拟键背景半透明。
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);

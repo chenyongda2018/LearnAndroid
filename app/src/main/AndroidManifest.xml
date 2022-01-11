@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroid">
-
+        <activity
+            android:name=".customview.TestDpActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -50,12 +52,10 @@
             android:name=".ui.wanAnd.WanAndActivity"
             android:exported="false"
             android:theme="@style/Theme.NoActionBar" />
-
         <activity
             android:name="com.example.wanandroid.wxartical.ui.WxArticleActivity"
             android:exported="false"
-
-            android:theme="@style/Theme.NoActionBar"/>
+            android:theme="@style/Theme.NoActionBar" />
     </application>
 
 </manifest>

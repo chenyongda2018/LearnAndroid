@@ -8,15 +8,15 @@ import android.os.Bundle
 import android.provider.CalendarContract
 import android.widget.Toast
 import com.cyd.learnandroid.databinding.ActivityIntentBinding
-import com.example.wanandroid.base.BaseActivity
+import com.cyd.learnandroid.ui.base.BaseActivity
 
 class IntentActivity : BaseActivity<ActivityIntentBinding>() {
 
-    override fun getViewBing(): ActivityIntentBinding? = ActivityIntentBinding.inflate(layoutInflater)
+    override fun getViewBing(): ActivityIntentBinding? =
+        ActivityIntentBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
         bindCallIntent()
 
@@ -53,9 +53,9 @@ class IntentActivity : BaseActivity<ActivityIntentBinding>() {
         val emailIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
             putExtra(Intent.EXTRA_EMAIL, arrayOf("1243724041@qq.com"))
-            putExtra(Intent.EXTRA_SUBJECT,"email test")
-            putExtra(Intent.EXTRA_TEXT,"email test text")
-            putExtra(Intent.EXTRA_STREAM,Uri.parse("content://path/to/email/attachment"))
+            putExtra(Intent.EXTRA_SUBJECT, "email test")
+            putExtra(Intent.EXTRA_TEXT, "email test text")
+            putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"))
         }
         mVb?.emailIntent?.setOnClickListener {
             startActivity(emailIntent)
@@ -78,15 +78,17 @@ class IntentActivity : BaseActivity<ActivityIntentBinding>() {
             Intent(Intent.ACTION_VIEW, location)
         }
 
-        val activities = packageManager.queryIntentActivities(mapIntent,
-            PackageManager.MATCH_DEFAULT_ONLY)
+        val activities = packageManager.queryIntentActivities(
+            mapIntent,
+            PackageManager.MATCH_DEFAULT_ONLY
+        )
 
 
         mVb?.mapIntent?.setOnClickListener {
-            if(activities.isNotEmpty()) {
+            if (activities.isNotEmpty()) {
                 startActivity(mapIntent)
             } else {
-                Toast.makeText(this,"没有程序能够响应intent",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "没有程序能够响应intent", Toast.LENGTH_SHORT).show()
             }
         }
     }

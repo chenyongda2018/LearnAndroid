@@ -58,12 +58,12 @@
                 android:weightSum="3">
 
                 <Button
-                    android:id="@+id/wanAndBtn"
+                    android:id="@+id/dpBtn"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:text="Wan Android"
+                    android:text="dp sp px"
                     android:maxLines="1"
                     android:textSize="12sp" />
             </LinearLayout>
