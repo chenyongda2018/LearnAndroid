@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.wanandroid.aspectj.Animal
 import com.example.wanandroid.base.BaseActivity
 import com.example.wanandroid.databinding.ActivityWanAndBinding
 import com.example.wanandroid.wxartical.WxMediaFragment
@@ -43,6 +44,8 @@ class WanAndActivity : BaseActivity<ActivityWanAndBinding>() {
         BnvVp2Mediator(mVb?.bottomNav, mVb?.viewPager) { bnv, vp2 ->
             vp2?.isUserInputEnabled = false
         }.attach()
+        val animal = Animal()
+        animal.fly()
     }
 
 }
