@@ -17,7 +17,7 @@ public class MethodAspect {
 
     public static final String TAG = MethodAspect.class.getSimpleName();
 
-    @Pointcut("call(* com.example.wanandroid.aspectj.Animal.fly(...))")
+    @Pointcut("call(* com.example.wanandroid.aspectj.Animal.fly(..))")
     public void callMethod() {}
 
     @Before("callMethod()")

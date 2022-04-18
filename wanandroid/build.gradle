@@ -38,10 +38,12 @@ android {
     viewBinding {
         enabled = true
     }
-//    aspectjx {
-//
-//        exclude 'android.support'
-//    }
+    aspectjx {
+
+        exclude 'android.support','androidx', 'com.google', 'com.squareup',
+                'org.apache',
+                'org.jetbrains.kotlin','com.google.android','kotlin'
+    }
 }
 
 dependencies {
