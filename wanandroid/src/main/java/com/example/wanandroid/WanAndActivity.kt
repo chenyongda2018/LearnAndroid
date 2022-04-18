@@ -22,14 +22,15 @@ class WanAndActivity : BaseActivity<ActivityWanAndBinding>() {
         const val INDEX_PROGRAM = 4
     }
 
-    private val fragments = mapOf<Int, Fragment>(
-        INDEX_HOME to NavHostFragment(),
-        INDEX_SQUARE to NavHostFragment(),
-        INDEX_WX_PUBLIC to WxMediaFragment(),
-        INDEX_SYSTEM to NavHostFragment(),
-        INDEX_PROGRAM to NavHostFragment(),
-    )
-
+    private val fragments by lazy {
+        mapOf(
+            INDEX_HOME to NavHostFragment(),
+            INDEX_SQUARE to NavHostFragment(),
+            INDEX_WX_PUBLIC to WxMediaFragment(),
+            INDEX_SYSTEM to NavHostFragment(),
+            INDEX_PROGRAM to NavHostFragment(),
+        )
+    }
 
     override fun getViewBing(): ActivityWanAndBinding? {
         return ActivityWanAndBinding.inflate(layoutInflater)

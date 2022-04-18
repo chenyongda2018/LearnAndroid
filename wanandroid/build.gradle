@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'android-aspectjx'
 }
+//apply plugin: 'android-aspectjx'
 
 android {
     compileSdk 31
@@ -35,6 +37,10 @@ android {
     }
     viewBinding {
         enabled = true
+    }
+    aspectjx {
+
+        exclude 'android.support'
     }
 }
 
