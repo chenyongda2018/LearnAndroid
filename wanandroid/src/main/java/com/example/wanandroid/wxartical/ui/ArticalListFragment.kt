@@ -52,7 +52,7 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
         )[WxArticleListViewModel::class.java]
 
         pagingAdapter = ArticleListAdapter { url ->
-            WxArticleActivity.start(context, url)
+            openArticle(url)
         }.apply {
             addLoadStateListener {
                 mViewBinding?.refreshLayout?.isRefreshing = it.refresh == LoadState.Loading
@@ -73,6 +73,10 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
                 pagingAdapter.submitData(pagingData)
             }
         }
+    }
+
+    private fun openArticle(url: String?) {
+        WxArticleActivity.start(context, url)
     }
 
     private fun refresh() {
