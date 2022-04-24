@@ -41,9 +41,7 @@ class ArticleListAdapter(
                 authorTv.text = article?.author
                 publishTime.text = article?.niceShareDate
 
-                cardView.setOnClickListener {
-                    onItemAction?.invoke(article?.link)
-                }
+                cardView.setOnClickListener { onItemAction?.invoke(article?.link) }
             }
 
         }
