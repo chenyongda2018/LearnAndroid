@@ -1,0 +1,2554 @@
+{
+  "v": "5.9.4",
+  "fr": 25,
+  "ip": 0,
+  "op": 80,
+  "w": 1080,
+  "h": 2400,
+  "nm": "模块功能",
+  "ddd": 0,
+  "assets": [
+    {
+      "id": "image_0",
+      "w": 23,
+      "h": 23,
+      "u": "",
+      "p": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAAC/ElEQVRIiZWVvW4kRRSFv1PVPYMBCfMEnhSRzGYgAo+JkNhg9gnWiIjIEBPYzsh2iSCzA1JkiFZISLYDCPFuhEQAyxPgTZbxuKsOQVV7xvIfW9KoWlN9v3PrVN3b4prhXz/dQs0UxR9w/lHvf/v8uvfuGroC/mVzDDohNIZGhBZiu09sd3Xvq0siPnm0ypAJNBNCA+ax3vns4p3mity8W6UBnETIxgiHh6Tw0L99eYziERqMCHFC6NbIUQSMLUKzBjy4Gc7ZiOTyGFoRUn2WIEwImkAHud+7IVuEATisLpOug6/RJSCBWogdOIvGQDZkUBKhMymKEIt92OAXt8NT9zZ5Du6Ac3AC5wLOnQjnEFoIERQhR6EWQAT9dTvc3RruCkgZskAyHSLkupMWclPgoTEBoQZSe3oj3IfTEecvxzgLsrGEE+ROMDcgMDgbZREaQEKdcRbu/l7mhSXwKu4OII/ALH7UOVPBVPG6lMEuouifa+HAHs5jnIq/RgiXgwJcs74QBLCRQOXCQphegftwuk1OU3JXDjKlcvquYT2x6lzM1DVLIBHipn//ZnIB9+H9bfJ8hzyDNIPc3xAL2bWIhVRYJdOl5OsOXUWl7UXm6fxz0gzSS5P/NWle/JVLQA/qdVwTFq5zFbeLnZ74j72tAu/OnpJm0M1EN1fNunqsRY5S70k9WHTJppyFU4nHOz7ZWw366GiD89kn5LMjXC1Z3JKabrWmz7rfjnAR6G9Rcim+/BZvhvVLXdEH746JbKHBZu2GRoPSN0Jb20H9L7ZGLYRhKaA4hGbFxDegef05rHx4peUWkfGIwfCA0I5LqbcmDEqZ90LLIgxPiYNjYntEs/KM7rWnuvfF6bVwAD95b4TaP1Hf0wcl00XWQs3XhPj4po/JjXAA/zR5hMIWtCIu2RKGIsQdfbC/e1t8uG2RAbsQXpSPQa8YRPbuXeA74do4OiXHXRxKEZWbua/173buAsMdtvTDP398SAjraHCsje83/k/MKw0/mY5eNeY/3MVvtRjvcVAAAAAASUVORK5CYII=",
+      "e": 1
+    },
+    {
+      "id": "image_1",
+      "w": 22,
+      "h": 24,
+      "u": "",
+      "p": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAYAAAD+vg1LAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAADNklEQVRIibWVMW9cVRCFvzNzd2NCEcMfYPMP4BdkjWgtHDqqBAkEqViHBqQQGSgi0ZiIIg2SLVPQJlWKSBG/AIVfgP9B3CBl/d69h+K9bBxpA0aIW943c96ZM2fmwv909G+Cvb8386QeOHJOxm5+evuHV8XGuUF/vPW5J/U3pCsIJN3+T4y9v7fp7A+Md1YZEZBJy9yafPL1r+vyCkD33WKuiBmRkAk51KIolxrdAjPDFbVqMI6QNHGEdoD1wP23i+sKHRCCMKgNqAS4AQ1ag9rbrZcxyoQUTKfXgMU64LB4GwytQu1R7a3am9pB7aDvoDs1/VL0p0TtofXgCvamj76/shaY2t9X39ndM+iWtG4pd89EtzTdEk6X0C9F7Y0bpiFs24KG02sZC6C/9fFTWt0UNhEiAyQT0vP2SsM3h6AUmG6gixfxxuvw2sZxxHRLV28cv2AMqHaHY+minkJ/alovtd60aslYIY9uUOaYaYMRvOWMx37407WXgJv1QALweG2BbaGBtUwKMiADh1AExpKq7Saoly0O/ehwf2W3ssGT1uUJZhNp9GlIEXaGnCkyIQKVxCEIgcCtKRjB3bBYtMdHlwcp9g5PmEytUkxJKAkZJgOVMnp7BM0c7kpYAcK4VuHecjWuIF0aBuTOYk5bvuE6ShGCTHksfdA17EiRgTNQpByBAqBC6+SW4Dzu6XcHxhfKdUoZuj0CUQYwlYIycaZUEpU8U0HY0ovF4Hpff07emW599KQARClXaL1NG6IiVo0amjUAOZMoYSKlDDsDZYHQiVJ72l7cXY10d+/WnNpmlLAUYJlcWUtDcphMEcFZOciUIv9gmle1/cXvZweklFLet5cmwB6U0QosIAZXqKSJhAipjHqXhCy72r75EihAaegE9EICMXQ+Q2RYOZTOyJQMO1NEQikn2r75YN1Ilyi+26o3I2Oz2cM/cvCqMmdkzsmwIzRstZQycUkc5f460NWu+LvT/7y3E6XskzEbpeG5g3RhuqN3P1vL+Fxvnn+5M/MFHRA5H9xQpOn0qd678earcs715unDr47jgy+3lPGNs0iT4iYdnSf33McP92d+dG/+T3F/AXubbowF4X3KAAAAAElFTkSuQmCC",
+      "e": 1
+    },
+    {
+      "id": "image_2",
+      "w": 11,
+      "h": 11,
+      "u": "",
+      "p": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAABf0lEQVQYlU2RK48UURBGv6pb93b37DAPJGICP4BgEWQ9D4UkYxGgECRDkBgGBwKFBIWEoMDALpoEPMnuD1imd+fRfR9VKMgee447hHO8X5yMU4s73a6gL+n44btLB+c9AcDnxcn4rPgXu22cr88id7vMOSkAO3LG9x99mH0DAAaAFJpPKZX5Zp14u0582va8+tNxu+qvbGP6srz1ex8A+Osy3yvFrsU+U4qFdrtMm3WkdtXxadvzZh0JoDcAIAQ8MFUzBVQNOStiLLTdJGZHCJUranr55d3jfQHTVWYGMYGYIELw3lkz8EoMiDhzzOYqmQkTtU54GgJbCM6qyuveUOG9IyKgbsSqRswLt8JCv+pabsTaI+4pmRqcJ81RQQTylbOmESPRn8IFy1C5j4OhNzMrzhFXnVDOCoKR82IS+O389cUjvv6YDgE8HQyCDkeVjUa1jid1mUxrHU+bPLkQfoQhFv+nAMDhK5tRxpOS9XbOZZKTHhS17zefNc//NX8B1dC40DQ/ezwAAAAASUVORK5CYII=",
+      "e": 1
+    },
+    {
+      "id": "image_3",
+      "w": 16,
+      "h": 16,
+      "u": "",
+      "p": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAACZUlEQVQ4jW2TsY6URxCEq7pnZpfjMOuLsINFR2iJ1NHJIUIicew38InAgYMDOSQgIEFCFzkjJ7JzB/cCyA9wsA+AWNm7//7/zHQ5WINOJzorqfSpq1VNXJtfLi8XOrx9stv1H2rEokro0VY72Os39759f93Pq+Lsw+Z0bP3pUOvXu9Y4ts4anV0CBAB6zZyfXQV9Bvz2cXyyq+PToVbbtsZtbRz3EGsRACA3QzK+K7PZg08QAsCzf6bTobbnmzrZZppsWxs3tXE7VRtb4xQdAJFIlOSap/RucwPf/3V8/NGeD8MSws89OlsP1hDG3ll759Qah/029m+dbFsn7mpj7f3uVyMfA4A58kkASwEICFIwJLQI1AhMvWOolZupcteDLQItRJCPf7y8XJjBH1GiJACAQAGUJO41GBIkQaF9bAKSFpx0NwFaghTNYKTMCCPMzZTMWNyj52yQlM3gRjkpJzHP8/sJJIxAosFJJDMUd00eKEkRkCUyBCAZkd1V3JDdNYOtkwl/5+T3vQezObIFspvmyQEARkT3oAA4ieKuWUqauatNbZUEXDjtp5kZWkrRFbbPDBgN2UxNQQgw4v8NXPOU3v9+/M3bNM3xZ5mwyjktS8giZQmAkUqts7kxtD8xAWQzJDMl81efi/Ri0AmJP1oPDK3ZvoGNTYEawQhBEGx/Izlt9fLO4jsAMAD49QYvKJxmNxykpIOc42YpcTPnuJVzHJYct0qJw1LiIOe38zJ7+MVnejlo2YnzkE5qD/YIfMofhnWEzg9jOD87Olp/EXAVFMSjLtwOxjq6Vhj94uyI6+ve/wBOZHkdPCVn6gAAAABJRU5ErkJggg==",
+      "e": 1
+    },
+    {
+      "id": "image_4",
+      "w": 36,
+      "h": 38,
+      "u": "",
+      "p": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAmCAYAAACsyDmTAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAAF20lEQVRYhcWYT24cxxnFf696+C82Ac4iCryb5AKRTuDhCSwvs4nCZVZWNrERIAidReRsLBkxkCCAYfkElE/A4QnEG2h2WsgwR4mdmeF018uiqrp7GNoeygJSwKC7q7urXr3vfa++HniF9veL+ehV3tuk6aYvfDqbPxMaBZhiH/52uDd9nYDCTR7+24v5OJpRxER7ZOnpP14u3vu/AVoF360RK8MK0cCB0aN//mtx+vlrCuONADXi7aXNIsLCZhnNyqaxxnUITz97ubj/YwFtrKEHz+cjdnh2GU1ESLAl2BbsSGxJDAQVmmirOTraezVtDTZ9sNpivIymRjQYnIBFCyqwjRLQcbUKT7/4pr4fq+oMYFDXozJZsA5iiAdVGZfAoKocF3z57lCzjQE1gXtNhAbT2G2/BIsGXAEGYywOBjE+rhxRfiaFQlimksAQJMA0sSbsVhPgcGNANmMjoo1zyAw0AEQUhQEHYQwC50mVLokyAYgWCUrqDxKKPigs/mD761ff3r0khchXVBdtJKjL+BlwY7KmnCYkIUgA0lFO9ypDdDzbGFBUeKdxCpXJ4ZLK0ZBIaPKKbdMIGtJkYv0X8iICEAwDCSqebAzIYmxDxCBhO/uFkJFl7MReLO84nQeBYgYgZTAi5HBWAuHZr/e2Jj8I6PjCB2+wOFlGj2JmxQYVdjJAEdK5E3/FFpqit8xEWpxa80sLE03grMz5nYAeXnxz216crPCocRJvdDsqqDOxFIpeBwkI0jr+Qp1SAoT8ZHA4KbevdeqPLxbv2eG0tke1lcBAmiSvvgVjJ3YyQwmXWvFSNOfsVSoGkAFIKPvVtQw9vFg8bBzvN4YauLRZuWjDfRG32WN6XlNyOfuCUNsn1sHk4/nRnqb/A+jB8/losO0nK8dfNobasIK0V9GJNWRRtDrINJepOnklN1JJ+Ra02vMgCO700wJ68GI+rip/3phRXcDY1EDjTLpEyPT3TS2HplyuNUkUQMqCb2nM7JmU7i2gv3z17V3kk1XeFla5vGgQjSOWLBcZqqcRtwjcupJb/bR33AtpT1Mp3GZQb533AQWC7tW5jFgYltFJNzEmZ/baDOk0acTpZj8MyRZadnr9bXzptBckGNS31wDV5mxFrm8MlyT/SFnVsdBfeQLhvmDWnDh1dRtwWZWuBDVIbA3CvX6fAD54Ph8tq3ja2KMyTLJ2tQkTJIecY6G4bvI5lecC2ZklC1Sui+gDSuMIBkLbwG4IF8tl+MXRUDPyGHz01t704a03fh7xh0XARbpdOqdt9YqPJBNo97f0rmytM5bPVG5bxbNsD/f3YsvSmjF++rP940H0ocx03THagV2Ee+VGH3iJU++QFlb8M2StOQve0XevBQTw6K39Sdi+vCPiJ8oKVitddzh7gl7PLLkov9DUpn6+dmY67XtgGJ841UPXbh2PhsPZo1v792UfYU/bpRXySx4XRkQvau7yy1dHzs9nTzKpcoiGOI+/+U5ApX18683H2004FJz3HbcASydya4sdgBZ92jq68BWzTNhMVNqrg/TO2rjf1z548e+xqU5LTVMqvUCaICixVrKvuHfIYS5lbJtx+d1KYoDZltgV7A2qOxt9l3300/1JEJP+ntTRlELQeYxLd5daFKe+miq0OooSdeTtjT8UK/ssUMqNzuSK4Es4rpIu4S5kV8rfvKMZp7I3MNsoZADHFxcHTdy5iBTTy6UoWjM/KYUi1ZGeBYVz4WkIEAhgzwQvByF9NQzsaQiBXXv6q/2tycaAAP709fw0mjGtZtQV62TBunx36ZP/sHV8nB1407bxdxmA7C8FY/e/hUpZEUKrJdu/e3+48+gmY5d2oz8bCMvHQcyCOqUo7U8FzDS4vvP+cPeVwNwY0PFwOMN6oiRgt8ZjkMJk6Z07vx++ef79o7xGQABV5IuQto5uC5Y//MPB9uFN9XJdu5GoS/vz1/NnNiMFzYTf/eNwb/JjgZR2I1GXFsVhFePthp9MXgcr/fZfdRnbkcSirbAAAAAASUVORK5CYII=",
+      "e": 1
+    },
+    {
+      "id": "comp_0",
+      "nm": "Ellipse 308",
+      "fr": 25,
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 2,
+          "nm": "Ellipse 308.png",
+          "cl": "png",
+          "refId": "image_3",
+          "sr": 1,
+          "ks": {
+            "o": {
+              "a": 0,
+              "k": 100,
+              "ix": 11
+            },
+            "r": {
+              "a": 0,
+              "k": 0,
+              "ix": 10
+            },
+            "p": {
+              "a": 0,
+              "k": [
+                8,
+                8,
+                0
+              ],
+              "ix": 2,
+              "l": 2
+            },
+            "a": {
+              "a": 0,
+              "k": [
+                8,
+                8,
+                0
+              ],
+              "ix": 1,
+              "l": 2
+            },
+            "s": {
+              "a": 0,
+              "k": [
+                100,
+                100,
+                100
+              ],
+              "ix": 6,
+              "l": 2
+            }
+          },
+          "ao": 0,
+          "ip": 0,
+          "op": 750,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_1",
+      "nm": "Star 9",
+      "fr": 25,
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 2,
+          "nm": "Star 9.png",
+          "cl": "png",
+          "refId": "image_4",
+          "sr": 1,
+          "ks": {
+            "o": {
+              "a": 0,
+              "k": 100,
+              "ix": 11
+            },
+            "r": {
+              "a": 0,
+              "k": 0,
+              "ix": 10
+            },
+            "p": {
+              "a": 0,
+              "k": [
+                18,
+                19,
+                0
+              ],
+              "ix": 2,
+              "l": 2
+            },
+            "a": {
+              "a": 0,
+              "k": [
+                18,
+                19,
+                0
+              ],
+              "ix": 1,
+              "l": 2
+            },
+            "s": {
+              "a": 0,
+              "k": [
+                100,
+                100,
+                100
+              ],
+              "ix": 6,
+              "l": 2
+            }
+          },
+          "ao": 0,
+          "ip": 0,
+          "op": 750,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 2,
+      "nm": "Star 黄色.png",
+      "cl": "png",
+      "refId": "image_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.189
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                3.167,
+                -96.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                959,
+                1891,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            131,
+            131,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 2,
+      "ty": 2,
+      "nm": "Star 黄色.png",
+      "cl": "png",
+      "refId": "image_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 31,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.282
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                3.167,
+                -96.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                971,
+                1993,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 3,
+      "ty": 2,
+      "nm": "Star 红色.png",
+      "cl": "png",
+      "refId": "image_1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 31,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.261
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                -16.833,
+                -102.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                779,
+                1995,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 4,
+      "ty": 2,
+      "nm": "Ellipse 紫色.png",
+      "cl": "png",
+      "refId": "image_2",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 31,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.124
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                53.167,
+                -182.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                757,
+                1807,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 5,
+      "ty": 2,
+      "nm": "Ellipse 紫色.png",
+      "cl": "png",
+      "refId": "image_2",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 30,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.413
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                19.167,
+                -66.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                865,
+                2005,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            130,
+            130,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 6,
+      "ty": 0,
+      "nm": "Ellipse 308",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 30,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.151
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                53.167,
+                -182.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                859,
+                1829,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "w": 16,
+      "h": 16,
+      "ip": 9,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 7,
+      "ty": 0,
+      "nm": "Ellipse 308",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 5,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 8,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 23,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 30,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 8,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 26,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.159
+              },
+              "t": 11,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                1.167,
+                -174.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                981,
+                1863,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "w": 16,
+      "h": 16,
+      "ip": 9,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 8,
+      "ty": 0,
+      "nm": "Ellipse 308",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 23,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 30,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 26,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.175
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                1.167,
+                -174.333,
+                0
+              ],
+              "ti": [
+                -13.167,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                995,
+                1929,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            8,
+            8,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "w": 16,
+      "h": 16,
+      "ip": 9,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 9,
+      "ty": 0,
+      "nm": "Star 9",
+      "refId": "comp_1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 12,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 24,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 12,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.116
+              },
+              "t": 15,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                53.167,
+                -92.333,
+                0
+              ],
+              "ti": [
+                110.833,
+                -9.5,
+                0
+              ]
+            },
+            {
+              "t": 28,
+              "s": [
+                769,
+                1887,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            18,
+            19,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            65.5,
+            65.5,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "w": 36,
+      "h": 38,
+      "ip": 9,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 10,
+      "ty": 0,
+      "nm": "Star 111111111111111111111111111111110",
+      "refId": "comp_1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 23,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 30,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 26,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.154
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                1.167,
+                -174.333,
+                0
+              ],
+              "ti": [
+                46.833,
+                -11.5,
+                0
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                749,
+                1933,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            18,
+            19,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "ef": [
+        {
+          "ty": 5,
+          "nm": "Elastic: 位置",
+          "np": 5,
+          "mn": "Pseudo/MDS Elastic Controller",
+          "ix": 1,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Amplitude",
+              "mn": "Pseudo/MDS Elastic Controller-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Frequency",
+              "mn": "Pseudo/MDS Elastic Controller-0002",
+              "ix": 2,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 2
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Decay",
+              "mn": "Pseudo/MDS Elastic Controller-0003",
+              "ix": 3,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 3
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "Elastic: 位置 2",
+          "np": 5,
+          "mn": "Pseudo/MDS Elastic Controller",
+          "ix": 2,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Amplitude",
+              "mn": "Pseudo/MDS Elastic Controller-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Frequency",
+              "mn": "Pseudo/MDS Elastic Controller-0002",
+              "ix": 2,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 2
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Decay",
+              "mn": "Pseudo/MDS Elastic Controller-0003",
+              "ix": 3,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 3
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "Elastic: 位置 3",
+          "np": 5,
+          "mn": "Pseudo/MDS Elastic Controller",
+          "ix": 3,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Amplitude",
+              "mn": "Pseudo/MDS Elastic Controller-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Frequency",
+              "mn": "Pseudo/MDS Elastic Controller-0002",
+              "ix": 2,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 2
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Decay",
+              "mn": "Pseudo/MDS Elastic Controller-0003",
+              "ix": 3,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 3
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "Bounce: 位置",
+          "np": 6,
+          "mn": "Pseudo/MDS Bounce Controller",
+          "ix": 4,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Amplitude",
+              "mn": "Pseudo/MDS Bounce Controller-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 50,
+                "ix": 1
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Gravity",
+              "mn": "Pseudo/MDS Bounce Controller-0002",
+              "ix": 2,
+              "v": {
+                "a": 0,
+                "k": 15,
+                "ix": 2
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Max Jumps",
+              "mn": "Pseudo/MDS Bounce Controller-0003",
+              "ix": 3,
+              "v": {
+                "a": 0,
+                "k": 5,
+                "ix": 3
+              }
+            },
+            {
+              "ty": 7,
+              "nm": "Jump In/Out",
+              "mn": "Pseudo/MDS Bounce Controller-0004",
+              "ix": 4,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 4
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "Elastic: 位置 4",
+          "np": 5,
+          "mn": "Pseudo/MDS Elastic Controller",
+          "ix": 5,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Amplitude",
+              "mn": "Pseudo/MDS Elastic Controller-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Frequency",
+              "mn": "Pseudo/MDS Elastic Controller-0002",
+              "ix": 2,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 2
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Decay",
+              "mn": "Pseudo/MDS Elastic Controller-0003",
+              "ix": 3,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 3
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "Elastic: 位置 5",
+          "np": 5,
+          "mn": "Pseudo/MDS Elastic Controller",
+          "ix": 6,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "Amplitude",
+              "mn": "Pseudo/MDS Elastic Controller-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Frequency",
+              "mn": "Pseudo/MDS Elastic Controller-0002",
+              "ix": 2,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 2
+              }
+            },
+            {
+              "ty": 0,
+              "nm": "Decay",
+              "mn": "Pseudo/MDS Elastic Controller-0003",
+              "ix": 3,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 3
+              }
+            }
+          ]
+        }
+      ],
+      "w": 36,
+      "h": 38,
+      "ip": 9,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 11,
+      "ty": 0,
+      "nm": "Star 11",
+      "refId": "comp_1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 6,
+              "s": [
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 23,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 29,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 9,
+              "s": [
+                180
+              ]
+            },
+            {
+              "t": 26,
+              "s": [
+                360
+              ]
+            }
+          ],
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0,
+                "y": 1
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.096
+              },
+              "t": 12,
+              "s": [
+                886,
+                2098,
+                0
+              ],
+              "to": [
+                1.167,
+                -174.333,
+                0
+              ],
+              "ti": [
+                74.833,
+                -47.5,
+                0
+              ]
+            },
+            {
+              "t": 27,
+              "s": [
+                577,
+                1929,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "l": 2,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, n, t, t, v;\ntry {\n    amp = $bm_div(effect('Elastic: 位置 5')(1), 200);\n    freq = $bm_div(effect('Elastic: 位置 5')(2), 30);\n    decay = $bm_div(effect('Elastic: 位置 5')(3), 10);\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n == 0) {\n        $bm_rt = t = 0;\n    } else {\n        $bm_rt = t = $bm_sub(time, key(n).time);\n    }\n    if (n > 0) {\n        v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10)));\n        $bm_rt = $bm_sum(value, $bm_div($bm_mul($bm_mul(v, amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))));\n    } else {\n        $bm_rt = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            18,
+            19,
+            0
+          ],
+          "ix": 1,
+          "l": 2
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            65.5,
+            65.5,
+            100
+          ],
+          "ix": 6,
+          "l": 2
+        }
+      },
+      "ao": 0,
+      "w": 36,
+      "h": 38,
+      "ip": 9,
+      "op": 80,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": [
+    {
+      "tm": 0,
+      "cm": "1",
+      "dr": 0
+    }
+  ]
+}
