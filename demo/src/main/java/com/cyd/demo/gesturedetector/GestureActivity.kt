@@ -75,7 +75,8 @@ class GestureActivity : AppCompatActivity() {
                 distanceX: Float,
                 distanceY: Float
             ): Boolean {
-                Log.d(TAG,"onScroll ->")
+                Log.d(TAG,"onScroll ->distanceX: $distanceX,\n" +
+                        "                distanceY: $distanceY ")
 
                 return super.onScroll(e1, e2, distanceX, distanceY)
             }

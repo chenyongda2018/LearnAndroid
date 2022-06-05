@@ -46,7 +46,7 @@ class FirstFragment : Fragment() {
         val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(extraParam1 = "From First Fragment")
 
         binding.navBtn.setOnClickListener {
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
         }
     }
     override fun onDestroyView() {
