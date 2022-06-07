@@ -10,6 +10,7 @@ import com.cyd.demo.gesturedetector.GestureActivity
 import com.cyd.demo.handlerthread.HandlerThreadActivity
 import com.cyd.demo.lottie.LottieActivity
 import com.cyd.demo.navigation.NavigationActivity
+import com.cyd.demo.rxjava.RxJavaActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             MainIntentBean("HandlerThread", Intent(this,HandlerThreadActivity::class.java)),
             MainIntentBean("Lottie", Intent(this,LottieActivity::class.java)),
             MainIntentBean("Jetpack Navigation", Intent(this,NavigationActivity::class.java)),
+            MainIntentBean("RxJava", Intent(this,RxJavaActivity::class.java)),
         )
 
         val rv = findViewById<RecyclerView>(R.id.main_rv).apply {

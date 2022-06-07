@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroid">
         <activity
+            android:name=".rxjava.RxJavaActivity"
+            android:exported="false" />
+        <activity
             android:name=".navigation.NavigationActivity"
             android:exported="false" />
         <activity
