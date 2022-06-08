@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".rxjava.RxJavaActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="210dp"
+        android:layout_height="300dp"
+        android:background="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/buffer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Buffer tap"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/buffer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Received x taps in x secs\n Maxunum of x taps received in this session."
+            android:gravity="center_horizontal"
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
