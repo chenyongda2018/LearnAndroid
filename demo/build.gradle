@@ -54,10 +54,11 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    implementation "com.jakewharton.rxbinding2:rxbinding:2.0.0"
     // RxJava
-    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
-    // RxAndroid
-    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+//    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
+//    // RxAndroid
+//    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
 
 //    implementation "com.jakewharton.rxbinding4:rxbinding:4.0.0"
 //    implementation "com.jakewharton.rxbinding4:rxbinding-core:4.0.0"

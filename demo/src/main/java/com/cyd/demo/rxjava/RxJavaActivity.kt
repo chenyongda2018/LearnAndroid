@@ -3,14 +3,18 @@ package com.cyd.demo.rxjava
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.cyd.demo.R
 import com.cyd.demo.databinding.ActivityRxJavaBinding
+import com.jakewharton.rxbinding2.view.RxView
+import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.functions.Action
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
+import kotlin.math.max
 
 class RxJavaActivity : AppCompatActivity() {
 
@@ -28,6 +32,62 @@ class RxJavaActivity : AppCompatActivity() {
 //        test1()
 //        test2()
 //        test3()
+        testRxViewBuffer()
+        testRxViewDebounce()
+    }
+
+    var maxClickCnt = 0
+    /**
+     * 每3秒，显示点击btn的次数
+     */
+    private fun testRxViewBuffer() {
+        RxView.clicks(binding.bufferBtn)
+            .map { 1 }
+            .buffer(3,TimeUnit.SECONDS)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(object: DisposableObserver<List<Int>>() {
+                override fun onNext(value: List<Int>?) {
+                    value?.let {
+                        if(it.isEmpty()) return@let
+                        Log.d(TAG,"onNext,bufferBtn")
+                        maxClickCnt = max(it.size,maxClickCnt)
+
+                        binding.bufferText.text = String.format("Received %d taps in 3 secs\n" +
+                                "Maximum of %d taps received in this session", it.size,maxClickCnt)
+                    }
+                }
+
+                override fun onError(e: Throwable?) {
+                }
+
+                override fun onComplete() {
+                }
+
+            })
+    }
+
+    private fun testRxViewDebounce() {
+        RxTextView.textChanges(binding.searchEt)
+            .debounce(500,TimeUnit.MILLISECONDS)
+            .subscribeOn(AndroidSchedulers.mainThread())
+            .filter { it.toString().trim().isNotEmpty() }
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(object :Observer<CharSequence> {
+                override fun onSubscribe(d: Disposable?) {
+                }
+
+                override fun onNext(value: CharSequence?) {
+                    Log.d(TAG,"debounce,$value")
+                    binding.searchResTv.text = value
+                }
+
+                override fun onError(e: Throwable?) {
+                }
+
+                override fun onComplete() {
+                }
+
+            })
     }
 
     /**
