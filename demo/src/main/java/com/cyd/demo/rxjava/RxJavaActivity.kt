@@ -75,7 +75,6 @@ class RxJavaActivity : AppCompatActivity() {
             .subscribe(object :Observer<CharSequence> {
                 override fun onSubscribe(d: Disposable?) {
                 }
-
                 override fun onNext(value: CharSequence?) {
                     Log.d(TAG,"debounce,$value")
                     binding.searchResTv.text = value
