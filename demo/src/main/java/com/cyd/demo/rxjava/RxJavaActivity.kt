@@ -12,7 +12,7 @@ import io.reactivex.schedulers.Schedulers
 
 class RxJavaActivity : AppCompatActivity() {
 
-    val TAG = "RxJavaActivity"
+    val TAG = "RxJavaActivity->"
 
     var mDisposable: Disposable? = null
 
@@ -57,6 +57,14 @@ class RxJavaActivity : AppCompatActivity() {
             }
             .subscribe(observer)
     }
+
+    /**
+     * 操作符
+     * 1.用于创建Observable:create, just, fromArray, range
+     * 2.过滤Observable发出的数据:debounce, filter, skip, last
+     * 3.创建新的Observable来转换原始Observable发出的数据:
+     *  buffer, map, flatMap, switchMap, compose
+     */
 
     override fun onDestroy() {
         super.onDestroy()
