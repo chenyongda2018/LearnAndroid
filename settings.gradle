@@ -3,3 +3,4 @@ rootProject.name = "LearnAndroid"
 include ':wanandroid'
 include ':mycompose'
 include ':demo'
+include ':stock'
