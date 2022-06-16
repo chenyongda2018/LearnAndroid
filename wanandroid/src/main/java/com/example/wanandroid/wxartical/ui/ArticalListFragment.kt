@@ -1,10 +1,13 @@
 package com.example.wanandroid.wxartical
 
+import android.app.AlertDialog
+import android.app.Dialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
@@ -13,6 +16,7 @@ import com.example.wanandroid.base.BaseFragment
 import com.example.wanandroid.databinding.FragArticleListLayoutBinding
 import com.example.wanandroid.wxartical.model.WxArticleRepository
 import com.example.wanandroid.wxartical.ui.ArticleListAdapter
+import com.example.wanandroid.wxartical.ui.DialogActivity
 import com.example.wanandroid.wxartical.ui.WxArticleActivity
 import com.example.wanandroid.wxartical.viewmodel.WxArticleListViewModel
 import com.example.wanandroid.wxartical.viewmodel.WxArticleListViewModelFactory
@@ -53,6 +57,7 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
 
         pagingAdapter = ArticleListAdapter { url ->
             openArticle(url)
+//            DialogActivity.start(requireContext())
         }.apply {
             addLoadStateListener {
                 mViewBinding?.refreshLayout?.isRefreshing = it.refresh == LoadState.Loading

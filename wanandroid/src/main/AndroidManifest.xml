@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroid">
         <activity
+            android:name=".wxartical.ui.DialogActivity"
+            android:exported="false" />
+        <activity
             android:name=".WanAndActivity"
             android:exported="true"
             android:theme="@style/Theme.NoActionBar">
@@ -21,12 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
-            android:name="com.example.wanandroid.wxartical.ui.WxArticleActivity"
+            android:name=".wxartical.ui.WxArticleActivity"
             android:exported="false"
-
             android:theme="@style/Theme.NoActionBar" />
     </application>
 
