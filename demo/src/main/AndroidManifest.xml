@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroid">
         <activity
+            android:name=".countDownTimer.CountDownActivity"
+            android:exported="false" />
+        <activity
             android:name=".room.RoomActivity"
             android:exported="false" />
         <activity

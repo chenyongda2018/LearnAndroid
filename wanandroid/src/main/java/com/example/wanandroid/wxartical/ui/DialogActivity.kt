@@ -21,13 +21,13 @@ class DialogActivity : BaseActivity<ActivityDialogBinding>() {
                 Thread.sleep(3000L)
                 runOnUiThread {
                     Log.d("fatal","dialog show()")
-//                    val dialog = AlertDialog.Builder(this)
-//                        .setTitle("我是Dialog")
-//                        .setMessage("哈哈哈哈哈或或")
-//                        .setCancelable(true)
-//                        .create()
-//                    dialog.show()
-                    Toast.makeText(this,"hahha",Toast.LENGTH_SHORT).show()
+                    val dialog = AlertDialog.Builder(this)
+                        .setTitle("我是Dialog")
+                        .setMessage("哈哈哈哈哈或或")
+                        .setCancelable(true)
+                        .create()
+                    dialog.show()
+//                    Toast.makeText(this,"hahha",Toast.LENGTH_SHORT).show()
                 }
             }.start()
         }

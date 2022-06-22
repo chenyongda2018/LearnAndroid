@@ -2,6 +2,7 @@ package com.example.wanandroid.aspectj;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
@@ -37,8 +38,9 @@ public class DialogAspect {
         try {
             Log.d(TAG, "getTarget ->" + joinPoint.getTarget());
             Object target = joinPoint.getTarget();
-            if (target instanceof AlertDialog) {
-                if (curActivityActive((AlertDialog) target)) {
+            if (target instanceof Dialog) {
+                if (curActivityActive((Dialog) target)) {
+                    Log.e(TAG, "Dialog proceed()");
                     joinPoint.proceed();
                     return;
                 }
@@ -52,7 +54,7 @@ public class DialogAspect {
     }
 
 
-    private boolean curActivityActive(AlertDialog dialog) {
+    private boolean curActivityActive(Dialog dialog) {
         Context ctx = dialog.getContext();
         if (ctx instanceof ContextThemeWrapper) {
             Context baseCtx = ((ContextThemeWrapper) ctx).getBaseContext();

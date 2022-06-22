@@ -10,7 +10,7 @@ import com.cyd.demo.R
 
 class HandlerThreadActivity : AppCompatActivity() {
 
-    val TAG = "HandlerThreadActivity"
+    val TAG = "HandlerThreadActivityTAG"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

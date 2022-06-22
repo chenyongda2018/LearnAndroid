@@ -56,8 +56,8 @@ class ArticleListFragment private constructor() : BaseFragment<FragArticleListLa
         )[WxArticleListViewModel::class.java]
 
         pagingAdapter = ArticleListAdapter { url ->
-            openArticle(url)
-//            DialogActivity.start(requireContext())
+//            openArticle(url)
+            DialogActivity.start(requireContext())
         }.apply {
             addLoadStateListener {
                 mViewBinding?.refreshLayout?.isRefreshing = it.refresh == LoadState.Loading
