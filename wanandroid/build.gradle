@@ -5,6 +5,7 @@ plugins {
 //    id 'android-aspectjx'
 }
 apply plugin: 'android-aspectjx'
+apply plugin: 'monitor-plugin'
 
 android {
     compileSdk 31
@@ -102,5 +103,7 @@ dependencies {
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    debugImplementation("io.github.lygttpod:monitor:0.0.4")
 
 }

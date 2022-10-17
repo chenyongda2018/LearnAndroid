@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".table.TableActivity">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:divider="@drawable/table_line_10_black"
+        android:orientation="vertical"
+        android:showDividers="beginning|end|middle"
+        android:shrinkColumns="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:divider="@drawable/table_line_10_black"
+            android:orientation="horizontal"
+            android:showDividers="beginning|end|middle">
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="500"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="使用目的"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="236dp"
+                android:layout_height="wrap_content"
+                android:maxWidth="212dp"
+                android:paddingVertical="10dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="10dp"
+                android:text="个人展啊蛇口街道克拉斯建档立卡久啊卡拉季开啦示"
+                android:textSize="14dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:divider="@drawable/table_line_10_black"
+            android:orientation="horizontal"
+            android:showDividers="beginning|end|middle">
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="500"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="使用目的"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="236dp"
+                android:layout_height="wrap_content"
+                android:maxWidth="212dp"
+                android:paddingVertical="10dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="10dp"
+                android:text="个人展啊蛇口街道克拉斯建档立卡久啊卡拉季开啦示"
+                android:textSize="14dp" />
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

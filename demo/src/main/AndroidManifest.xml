@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroid">
         <activity
+            android:name=".table.TableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".broadcast.BroadCastActivity"
+            android:exported="false" />
+        <activity
             android:name=".countDownTimer.CountDownActivity"
             android:exported="false" />
         <activity
@@ -39,6 +45,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".broadcast.MyBroadCastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="helloworld" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
