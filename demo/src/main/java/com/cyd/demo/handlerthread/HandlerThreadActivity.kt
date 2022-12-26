@@ -18,10 +18,7 @@ class HandlerThreadActivity : AppCompatActivity() {
         val handlerThread = HandlerThread("my_handler_thread")
         handlerThread.start()
         val workHandler = Handler(handlerThread.looper) { msg ->
-            Log.d(
-                TAG,
-                "workHandler -> msg: ${msg.what}, cur thread is ${Thread.currentThread().name}"
-            )
+            Log.d(TAG, "workHandler -> msg: ${msg.what}, cur thread is ${Thread.currentThread().name}")
             true
         }
         val msg = Message.obtain().apply {
