@@ -15,7 +15,9 @@ import com.cyd.demo.navigation.NavigationActivity
 import com.cyd.demo.room.RoomActivity
 import com.cyd.demo.rxjava.RxJavaActivity
 import com.cyd.demo.table.TableActivity
+import com.example.annotation.Test
 
+@Test
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
