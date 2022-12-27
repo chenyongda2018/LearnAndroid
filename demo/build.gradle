@@ -68,6 +68,10 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+    //X2C
+    annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
+    implementation 'com.zhangyue.we:x2c-lib:1.0.6'
+
     implementation project(':annotation')
     annotationProcessor project(':compiler')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

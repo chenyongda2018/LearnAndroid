@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.zhangyue.we.x2c.X2C
 
 /**
  * Created by cyd on 2022/5/27
@@ -18,8 +19,9 @@ class MainListAdapter(
 ) : RecyclerView.Adapter<MainListAdapter.MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.main_rv_simple_item_layout, parent, false)
+//        val view = LayoutInflater.from(parent.context)
+//            .inflate(R.layout.main_rv_simple_item_layout, parent, false)
+        val view = X2C.inflate(parent.context,R.layout.main_rv_simple_item_layout,parent,false)
         return MainViewHolder(view,onItemClick)
     }
 
@@ -41,6 +43,7 @@ class MainListAdapter(
     override fun getItemCount(): Int {
         return dataList.size
     }
+
 }
 
 data class MainIntentBean(

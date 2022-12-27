@@ -3,6 +3,7 @@ package com.cyd.demo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,15 +16,19 @@ import com.cyd.demo.navigation.NavigationActivity
 import com.cyd.demo.room.RoomActivity
 import com.cyd.demo.rxjava.RxJavaActivity
 import com.cyd.demo.table.TableActivity
-import com.example.annotation.Test
+import com.zhangyue.we.x2c.X2C
+import com.zhangyue.we.x2c.ano.Xml
 
-@Test
+@Xml(layouts = ["activity_main"])
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val TAG = "MainActivity-TAG"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val intentList = mutableListOf<MainIntentBean>(
             MainIntentBean("GestureDetector", Intent(this,GestureActivity::class.java)),
             MainIntentBean("HandlerThread", Intent(this,HandlerThreadActivity::class.java)),
